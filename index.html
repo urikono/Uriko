@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uriko</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <h1>🛩️ Uriko</h1>
+        <p class="slogan">essayons juste de ne pas se crasher</p>
+        <input type="text" id="multiplicateurs" placeholder="Ex: 1.00, 2.13, 34.76..." />
+        <button onclick="analyser()">Analyser</button>
+        <div id="resultat"></div>
+        <div id="stats"></div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+</body>
+</html>
